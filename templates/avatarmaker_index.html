@@ -1,0 +1,780 @@
+<!-- start of avatarmaker main block -->
+<form action="index.php" method="post">
+
+<div align="center"><img src="<{$xoops_url}>/modules/avatarmaker/img/logo_ava.gif" width="367" height="53" /></div>
+
+<hr style="border: solid 1px #efefef;" />
+
+<{if $view eq "preview"}>
+	<div align="center">
+	<img src="<{$image_url}>" /><br /><br />
+	<{if $xoops_isuser eq 1 }>
+		<input type="submit" name="store" value="<{$_MD_AVATARMAKER_SET_AVATAR}>" /><br /><br />
+	<{/if}>
+	<b><{$_MD_AVATARMAKER_CORRECT}></b>
+
+	<br /><br />
+
+	[ <a href="#background"><{$_MD_AVATARMAKER_BACKGROUND}></a> ]
+	[ <a href="#bhair"><{$_MD_AVATARMAKER_BHAIR}></a> ]
+	[ <a href="#ear"><{$_MD_AVATARMAKER_EAR}></a> ]
+	[ <a href="#face"><{$_MD_AVATARMAKER_FACE}></a> ]
+	[ <a href="#fhair"><{$_MD_AVATARMAKER_FHAIR}></a> ]
+	[ <a href="#eyebrow"><{$_MD_AVATARMAKER_EYEBROW}></a> ]
+	[ <a href="#eyes"><{$_MD_AVATARMAKER_EYES}></a> ]
+	[ <a href="#nose"><{$_MD_AVATARMAKER_NOSE}></a> ]
+	[ <a href="#mouth"><{$_MD_AVATARMAKER_MOUTH}></a> ]
+	[ <a href="#dress"><{$_MD_AVATARMAKER_DRESS}></a> ]
+	[ <a href="#others"><{$_MD_AVATARMAKER_OTHERS}></a> ]
+	</div>
+<{else}>
+	<div align="center"><img src="<{$xoops_url}>/modules/avatarmaker/img/space.png" width="<{$image_width}>" height="<{$image_height}>" style="border: dotted 1px #999999;" /><br /><br />
+	<b><{$_MD_AVATARMAKER_PREVIEW_WINDOW}></b>
+	</div>
+<{/if}>
+
+<hr style="border: solid 1px #efefef;" />
+
+<br />
+
+<table class="outer">
+<tr>
+<th colspan="5" style="text-align: left;" name="background" id="background"><{$_MD_AVATARMAKER_BACKGROUND}></th>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/bg_001.png" /></td>
+<td><img src="img/bg_002.png" /></td>
+<td><img src="img/bg_003.png" /></td>
+<td><img src="img/bg_004.png" /></td>
+<td><img src="img/bg_005.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i1" value="bg_001"<{$checked.i1.bg_001|default:""}> /></td>
+<td><input type="radio" name="i1" value="bg_002"<{$checked.i1.bg_002|default:""}> /></td>
+<td><input type="radio" name="i1" value="bg_003"<{$checked.i1.bg_003|default:""}> /></td>
+<td><input type="radio" name="i1" value="bg_004"<{$checked.i1.bg_004|default:""}> /></td>
+<td><input type="radio" name="i1" value="bg_005"<{$checked.i1.bg_005|default:""}> /></td>
+</tr>
+<tr align="center" class="odd">
+<td><img src="img/bg_006.png" /></td>
+<td><img src="img/bg_007.png" /></td>
+<td><img src="img/bg_008.png" /></td>
+<td><img src="img/bg_009.png" /></td>
+<td><img src="img/bg_010.png" /></td>
+</tr>
+<tr align="center" class="odd">
+<td><input type="radio" name="i1" value="bg_006"<{$checked.i1.bg_006|default:""}> /></td>
+<td><input type="radio" name="i1" value="bg_007"<{$checked.i1.bg_007|default:""}> /></td>
+<td><input type="radio" name="i1" value="bg_008"<{$checked.i1.bg_008|default:""}> /></td>
+<td><input type="radio" name="i1" value="bg_009"<{$checked.i1.bg_009|default:""}> /></td>
+<td><input type="radio" name="i1" value="bg_010"<{$checked.i1.bg_010|default:""}> /></td>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/bg_011.png" /></td>
+<td><img src="img/bg_012.png" /></td>
+<td><img src="img/bg_013.png" /></td>
+<td><img src="img/bg_014.png" /></td>
+<td><img src="img/bg_015.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i1" value="bg_011"<{$checked.i1.bg_011|default:""}> /></td>
+<td><input type="radio" name="i1" value="bg_012"<{$checked.i1.bg_012|default:""}> /></td>
+<td><input type="radio" name="i1" value="bg_013"<{$checked.i1.bg_013|default:""}> /></td>
+<td><input type="radio" name="i1" value="bg_014"<{$checked.i1.bg_014|default:""}> /></td>
+<td><input type="radio" name="i1" value="bg_015"<{$checked.i1.bg_015|default:""}> /></td>
+</tr>
+<tr>
+<td colspan="5" align="right" class="foot">
+<input type="radio" name="i1" value="space"<{$checked.i1.space|default:""}> /> <{$_MD_AVATARMAKER_CLEAR}>
+<input type="submit" name="preview" value="<{$_MD_AVATARMAKER_PREVIEW}>" />
+</td>
+</tr>
+</table>
+
+<p align="center">
+	[ <a href="#background"><{$_MD_AVATARMAKER_BACKGROUND}></a> ]
+	[ <a href="#bhair"><{$_MD_AVATARMAKER_BHAIR}></a> ]
+	[ <a href="#ear"><{$_MD_AVATARMAKER_EAR}></a> ]
+	[ <a href="#face"><{$_MD_AVATARMAKER_FACE}></a> ]
+	[ <a href="#fhair"><{$_MD_AVATARMAKER_FHAIR}></a> ]
+	[ <a href="#eyebrow"><{$_MD_AVATARMAKER_EYEBROW}></a> ]
+	[ <a href="#eyes"><{$_MD_AVATARMAKER_EYES}></a> ]
+	[ <a href="#nose"><{$_MD_AVATARMAKER_NOSE}></a> ]
+	[ <a href="#mouth"><{$_MD_AVATARMAKER_MOUTH}></a> ]
+	[ <a href="#dress"><{$_MD_AVATARMAKER_DRESS}></a> ]
+	[ <a href="#others"><{$_MD_AVATARMAKER_OTHERS}></a> ]
+</p>
+
+<table class="outer">
+<tr>
+<th colspan="5" style="text-align: left;" name="bhair" id="bhair"><{$_MD_AVATARMAKER_BHAIR}></th>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/bhr_001.png" /></td>
+<td><img src="img/bhr_002.png" /></td>
+<td><img src="img/bhr_003.png" /></td>
+<td><img src="img/bhr_004.png" /></td>
+<td><img src="img/bhr_005.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i2" value="bhr_001"<{$checked.i2.bhr_001|default:""}> /></td>
+<td><input type="radio" name="i2" value="bhr_002"<{$checked.i2.bhr_002|default:""}> /></td>
+<td><input type="radio" name="i2" value="bhr_003"<{$checked.i2.bhr_003|default:""}> /></td>
+<td><input type="radio" name="i2" value="bhr_004"<{$checked.i2.bhr_004|default:""}> /></td>
+<td><input type="radio" name="i2" value="bhr_005"<{$checked.i2.bhr_005|default:""}> /></td>
+</tr>
+<tr align="center" class="odd">
+<td><img src="img/bhr_006.png" /></td>
+<td><img src="img/bhr_007.png" /></td>
+<td><img src="img/bhr_008.png" /></td>
+<td><img src="img/bhr_009.png" /></td>
+<td><img src="img/bhr_010.png" /></td>
+</tr>
+<tr align="center" class="odd">
+<td><input type="radio" name="i2" value="bhr_006"<{$checked.i2.bhr_006|default:""}> /></td>
+<td><input type="radio" name="i2" value="bhr_007"<{$checked.i2.bhr_007|default:""}> /></td>
+<td><input type="radio" name="i2" value="bhr_008"<{$checked.i2.bhr_008|default:""}> /></td>
+<td><input type="radio" name="i2" value="bhr_009"<{$checked.i2.bhr_009|default:""}> /></td>
+<td><input type="radio" name="i2" value="bhr_010"<{$checked.i2.bhr_010|default:""}> /></td>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/bhr_011.png" /></td>
+<td><img src="img/bhr_012.png" /></td>
+<td><img src="img/bhr_013.png" /></td>
+<td><img src="img/bhr_014.png" /></td>
+<td><img src="img/bhr_015.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i2" value="bhr_011"<{$checked.i2.bhr_011|default:""}> /></td>
+<td><input type="radio" name="i2" value="bhr_012"<{$checked.i2.bhr_012|default:""}> /></td>
+<td><input type="radio" name="i2" value="bhr_013"<{$checked.i2.bhr_013|default:""}> /></td>
+<td><input type="radio" name="i2" value="bhr_014"<{$checked.i2.bhr_014|default:""}> /></td>
+<td><input type="radio" name="i2" value="bhr_015"<{$checked.i2.bhr_015|default:""}> /></td>
+</tr>
+<tr>
+<td colspan="5" align="right" class="foot">
+<input type="radio" name="i2" value="space"<{$checked.i2.space|default:""}> /> <{$_MD_AVATARMAKER_CLEAR}>
+<input type="submit" name="preview" value="<{$_MD_AVATARMAKER_PREVIEW}>" />
+</td>
+</tr>
+</table>
+
+<p align="center">
+	[ <a href="#background"><{$_MD_AVATARMAKER_BACKGROUND}></a> ]
+	[ <a href="#bhair"><{$_MD_AVATARMAKER_BHAIR}></a> ]
+	[ <a href="#ear"><{$_MD_AVATARMAKER_EAR}></a> ]
+	[ <a href="#face"><{$_MD_AVATARMAKER_FACE}></a> ]
+	[ <a href="#fhair"><{$_MD_AVATARMAKER_FHAIR}></a> ]
+	[ <a href="#eyebrow"><{$_MD_AVATARMAKER_EYEBROW}></a> ]
+	[ <a href="#eyes"><{$_MD_AVATARMAKER_EYES}></a> ]
+	[ <a href="#nose"><{$_MD_AVATARMAKER_NOSE}></a> ]
+	[ <a href="#mouth"><{$_MD_AVATARMAKER_MOUTH}></a> ]
+	[ <a href="#dress"><{$_MD_AVATARMAKER_DRESS}></a> ]
+	[ <a href="#others"><{$_MD_AVATARMAKER_OTHERS}></a> ]
+</p>
+
+<table class="outer">
+<tr>
+<th colspan="5" style="text-align: left;" name="ear" id="ear"><{$_MD_AVATARMAKER_EAR}></th>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/ear_001.png" /></td>
+<td><img src="img/ear_002.png" /></td>
+<td><img src="img/ear_003.png" /></td>
+<td><img src="img/ear_004.png" /></td>
+<td><img src="img/ear_005.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i3" value="ear_001"<{$checked.i3.ear_001|default:""}> /></td>
+<td><input type="radio" name="i3" value="ear_002"<{$checked.i3.ear_002|default:""}> /></td>
+<td><input type="radio" name="i3" value="ear_003"<{$checked.i3.ear_003|default:""}> /></td>
+<td><input type="radio" name="i3" value="ear_004"<{$checked.i3.ear_004|default:""}> /></td>
+<td><input type="radio" name="i3" value="ear_005"<{$checked.i3.ear_005|default:""}> /></td>
+</tr>
+<tr align="center" class="odd">
+<td><img src="img/ear_006.png" /></td>
+<td><img src="img/ear_007.png" /></td>
+<td><img src="img/ear_008.png" /></td>
+<td><img src="img/ear_009.png" /></td>
+<td><img src="img/ear_010.png" /></td>
+</tr>
+<tr align="center" class="odd">
+<td><input type="radio" name="i3" value="ear_006"<{$checked.i3.ear_006|default:""}> /></td>
+<td><input type="radio" name="i3" value="ear_007"<{$checked.i3.ear_007|default:""}> /></td>
+<td><input type="radio" name="i3" value="ear_008"<{$checked.i3.ear_008|default:""}> /></td>
+<td><input type="radio" name="i3" value="ear_009"<{$checked.i3.ear_009|default:""}> /></td>
+<td><input type="radio" name="i3" value="ear_010"<{$checked.i3.ear_010|default:""}> /></td>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/ear_011.png" /></td>
+<td><img src="img/ear_012.png" /></td>
+<td><img src="img/ear_013.png" /></td>
+<td><img src="img/ear_014.png" /></td>
+<td><img src="img/ear_015.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i3" value="ear_011"<{$checked.i3.ear_011|default:""}> /></td>
+<td><input type="radio" name="i3" value="ear_012"<{$checked.i3.ear_012|default:""}> /></td>
+<td><input type="radio" name="i3" value="ear_013"<{$checked.i3.ear_013|default:""}> /></td>
+<td><input type="radio" name="i3" value="ear_014"<{$checked.i3.ear_014|default:""}> /></td>
+<td><input type="radio" name="i3" value="ear_015"<{$checked.i3.ear_015|default:""}> /></td>
+</tr>
+<tr>
+<td colspan="5" align="right" class="foot">
+<input type="radio" name="i3" value="space"<{$checked.i3.space|default:""}> /> <{$_MD_AVATARMAKER_CLEAR}>
+<input type="submit" name="preview" value="<{$_MD_AVATARMAKER_PREVIEW}>" />
+</td>
+</tr>
+</table>
+
+<p align="center">
+	[ <a href="#background"><{$_MD_AVATARMAKER_BACKGROUND}></a> ]
+	[ <a href="#bhair"><{$_MD_AVATARMAKER_BHAIR}></a> ]
+	[ <a href="#ear"><{$_MD_AVATARMAKER_EAR}></a> ]
+	[ <a href="#face"><{$_MD_AVATARMAKER_FACE}></a> ]
+	[ <a href="#fhair"><{$_MD_AVATARMAKER_FHAIR}></a> ]
+	[ <a href="#eyebrow"><{$_MD_AVATARMAKER_EYEBROW}></a> ]
+	[ <a href="#eyes"><{$_MD_AVATARMAKER_EYES}></a> ]
+	[ <a href="#nose"><{$_MD_AVATARMAKER_NOSE}></a> ]
+	[ <a href="#mouth"><{$_MD_AVATARMAKER_MOUTH}></a> ]
+	[ <a href="#dress"><{$_MD_AVATARMAKER_DRESS}></a> ]
+	[ <a href="#others"><{$_MD_AVATARMAKER_OTHERS}></a> ]
+</p>
+
+<table class="outer">
+<tr>
+<th colspan="5" style="text-align: left;" name="face" id="face"><{$_MD_AVATARMAKER_FACE}></th>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/fc_001.png" /></td>
+<td><img src="img/fc_002.png" /></td>
+<td><img src="img/fc_003.png" /></td>
+<td><img src="img/fc_004.png" /></td>
+<td><img src="img/fc_005.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i4" value="fc_001"<{$checked.i4.fc_001|default:""}> /></td>
+<td><input type="radio" name="i4" value="fc_002"<{$checked.i4.fc_002|default:""}> /></td>
+<td><input type="radio" name="i4" value="fc_003"<{$checked.i4.fc_003|default:""}> /></td>
+<td><input type="radio" name="i4" value="fc_004"<{$checked.i4.fc_004|default:""}> /></td>
+<td><input type="radio" name="i4" value="fc_005"<{$checked.i4.fc_005|default:""}> /></td>
+</tr>
+<tr align="center" class="odd">
+<td><img src="img/fc_006.png" /></td>
+<td><img src="img/fc_007.png" /></td>
+<td><img src="img/fc_008.png" /></td>
+<td><img src="img/fc_009.png" /></td>
+<td><img src="img/fc_010.png" /></td>
+</tr>
+<tr align="center" class="odd">
+<td><input type="radio" name="i4" value="fc_006"<{$checked.i4.fc_006|default:""}> /></td>
+<td><input type="radio" name="i4" value="fc_007"<{$checked.i4.fc_007|default:""}> /></td>
+<td><input type="radio" name="i4" value="fc_008"<{$checked.i4.fc_008|default:""}> /></td>
+<td><input type="radio" name="i4" value="fc_009"<{$checked.i4.fc_009|default:""}> /></td>
+<td><input type="radio" name="i4" value="fc_010"<{$checked.i4.fc_010|default:""}> /></td>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/fc_011.png" /></td>
+<td><img src="img/fc_012.png" /></td>
+<td><img src="img/fc_013.png" /></td>
+<td><img src="img/fc_014.png" /></td>
+<td><img src="img/fc_015.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i4" value="fc_011"<{$checked.i4.fc_011|default:""}> /></td>
+<td><input type="radio" name="i4" value="fc_012"<{$checked.i4.fc_012|default:""}> /></td>
+<td><input type="radio" name="i4" value="fc_013"<{$checked.i4.fc_013|default:""}> /></td>
+<td><input type="radio" name="i4" value="fc_014"<{$checked.i4.fc_014|default:""}> /></td>
+<td><input type="radio" name="i4" value="fc_015"<{$checked.i4.fc_015|default:""}> /></td>
+</tr>
+<tr>
+<td colspan="5" align="right" class="foot">
+<input type="radio" name="i4" value="space"<{$checked.i4.space|default:""}> /> <{$_MD_AVATARMAKER_CLEAR}>
+<input type="submit" name="preview" value="<{$_MD_AVATARMAKER_PREVIEW}>" />
+</td>
+</tr>
+</table>
+
+<p align="center">
+	[ <a href="#background"><{$_MD_AVATARMAKER_BACKGROUND}></a> ]
+	[ <a href="#bhair"><{$_MD_AVATARMAKER_BHAIR}></a> ]
+	[ <a href="#ear"><{$_MD_AVATARMAKER_EAR}></a> ]
+	[ <a href="#face"><{$_MD_AVATARMAKER_FACE}></a> ]
+	[ <a href="#fhair"><{$_MD_AVATARMAKER_FHAIR}></a> ]
+	[ <a href="#eyebrow"><{$_MD_AVATARMAKER_EYEBROW}></a> ]
+	[ <a href="#eyes"><{$_MD_AVATARMAKER_EYES}></a> ]
+	[ <a href="#nose"><{$_MD_AVATARMAKER_NOSE}></a> ]
+	[ <a href="#mouth"><{$_MD_AVATARMAKER_MOUTH}></a> ]
+	[ <a href="#dress"><{$_MD_AVATARMAKER_DRESS}></a> ]
+	[ <a href="#others"><{$_MD_AVATARMAKER_OTHERS}></a> ]
+</p>
+
+<table class="outer">
+<tr>
+<th colspan="5" style="text-align: left;" name="fhair" id="fhair"><{$_MD_AVATARMAKER_FHAIR}></th>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/fhr_001.png" /></td>
+<td><img src="img/fhr_002.png" /></td>
+<td><img src="img/fhr_003.png" /></td>
+<td><img src="img/fhr_004.png" /></td>
+<td><img src="img/fhr_005.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i5" value="fhr_001"<{$checked.i5.fhr_001|default:""}> /></td>
+<td><input type="radio" name="i5" value="fhr_002"<{$checked.i5.fhr_002|default:""}> /></td>
+<td><input type="radio" name="i5" value="fhr_003"<{$checked.i5.fhr_003|default:""}> /></td>
+<td><input type="radio" name="i5" value="fhr_004"<{$checked.i5.fhr_004|default:""}> /></td>
+<td><input type="radio" name="i5" value="fhr_005"<{$checked.i5.fhr_005|default:""}> /></td>
+</tr>
+<tr align="center" class="odd">
+<td><img src="img/fhr_006.png" /></td>
+<td><img src="img/fhr_007.png" /></td>
+<td><img src="img/fhr_008.png" /></td>
+<td><img src="img/fhr_009.png" /></td>
+<td><img src="img/fhr_010.png" /></td>
+</tr>
+<tr align="center" class="odd">
+<td><input type="radio" name="i5" value="fhr_006"<{$checked.i5.fhr_006|default:""}> /></td>
+<td><input type="radio" name="i5" value="fhr_007"<{$checked.i5.fhr_007|default:""}> /></td>
+<td><input type="radio" name="i5" value="fhr_008"<{$checked.i5.fhr_008|default:""}> /></td>
+<td><input type="radio" name="i5" value="fhr_009"<{$checked.i5.fhr_009|default:""}> /></td>
+<td><input type="radio" name="i5" value="fhr_010"<{$checked.i5.fhr_010|default:""}> /></td>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/fhr_011.png" /></td>
+<td><img src="img/fhr_012.png" /></td>
+<td><img src="img/fhr_013.png" /></td>
+<td><img src="img/fhr_014.png" /></td>
+<td><img src="img/fhr_015.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i5" value="fhr_011"<{$checked.i5.fhr_011|default:""}> /></td>
+<td><input type="radio" name="i5" value="fhr_012"<{$checked.i5.fhr_012|default:""}> /></td>
+<td><input type="radio" name="i5" value="fhr_013"<{$checked.i5.fhr_013|default:""}> /></td>
+<td><input type="radio" name="i5" value="fhr_014"<{$checked.i5.fhr_014|default:""}> /></td>
+<td><input type="radio" name="i5" value="fhr_015"<{$checked.i5.fhr_015|default:""}> /></td>
+</tr>
+<tr>
+<td colspan="5" align="right" class="foot">
+<input type="radio" name="i5" value="space"<{$checked.i5.space|default:""}> /> <{$_MD_AVATARMAKER_CLEAR}>
+<input type="submit" name="preview" value="<{$_MD_AVATARMAKER_PREVIEW}>" />
+</td>
+</tr>
+</table>
+
+<p align="center">
+	[ <a href="#background"><{$_MD_AVATARMAKER_BACKGROUND}></a> ]
+	[ <a href="#bhair"><{$_MD_AVATARMAKER_BHAIR}></a> ]
+	[ <a href="#ear"><{$_MD_AVATARMAKER_EAR}></a> ]
+	[ <a href="#face"><{$_MD_AVATARMAKER_FACE}></a> ]
+	[ <a href="#fhair"><{$_MD_AVATARMAKER_FHAIR}></a> ]
+	[ <a href="#eyebrow"><{$_MD_AVATARMAKER_EYEBROW}></a> ]
+	[ <a href="#eyes"><{$_MD_AVATARMAKER_EYES}></a> ]
+	[ <a href="#nose"><{$_MD_AVATARMAKER_NOSE}></a> ]
+	[ <a href="#mouth"><{$_MD_AVATARMAKER_MOUTH}></a> ]
+	[ <a href="#dress"><{$_MD_AVATARMAKER_DRESS}></a> ]
+	[ <a href="#others"><{$_MD_AVATARMAKER_OTHERS}></a> ]
+</p>
+
+<table class="outer">
+<tr>
+<th colspan="5" style="text-align: left;" name="eyebrow" id="eyebrow"><{$_MD_AVATARMAKER_EYEBROW}></th>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/eb_001.png" /></td>
+<td><img src="img/eb_002.png" /></td>
+<td><img src="img/eb_003.png" /></td>
+<td><img src="img/eb_004.png" /></td>
+<td><img src="img/eb_005.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i6" value="eb_001"<{$checked.i6.eb_001|default:""}> /></td>
+<td><input type="radio" name="i6" value="eb_002"<{$checked.i6.eb_002|default:""}> /></td>
+<td><input type="radio" name="i6" value="eb_003"<{$checked.i6.eb_003|default:""}> /></td>
+<td><input type="radio" name="i6" value="eb_004"<{$checked.i6.eb_004|default:""}> /></td>
+<td><input type="radio" name="i6" value="eb_005"<{$checked.i6.eb_005|default:""}> /></td>
+</tr>
+<tr align="center" class="odd">
+<td><img src="img/eb_006.png" /></td>
+<td><img src="img/eb_007.png" /></td>
+<td><img src="img/eb_008.png" /></td>
+<td><img src="img/eb_009.png" /></td>
+<td><img src="img/eb_010.png" /></td>
+</tr>
+<tr align="center" class="odd">
+<td><input type="radio" name="i6" value="eb_006"<{$checked.i6.eb_006|default:""}> /></td>
+<td><input type="radio" name="i6" value="eb_007"<{$checked.i6.eb_007|default:""}> /></td>
+<td><input type="radio" name="i6" value="eb_008"<{$checked.i6.eb_008|default:""}> /></td>
+<td><input type="radio" name="i6" value="eb_009"<{$checked.i6.eb_009|default:""}> /></td>
+<td><input type="radio" name="i6" value="eb_010"<{$checked.i6.eb_010|default:""}> /></td>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/eb_011.png" /></td>
+<td><img src="img/eb_012.png" /></td>
+<td><img src="img/eb_013.png" /></td>
+<td><img src="img/eb_014.png" /></td>
+<td><img src="img/eb_015.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i6" value="eb_011"<{$checked.i6.eb_011|default:""}> /></td>
+<td><input type="radio" name="i6" value="eb_012"<{$checked.i6.eb_012|default:""}> /></td>
+<td><input type="radio" name="i6" value="eb_013"<{$checked.i6.eb_013|default:""}> /></td>
+<td><input type="radio" name="i6" value="eb_014"<{$checked.i6.eb_014|default:""}> /></td>
+<td><input type="radio" name="i6" value="eb_015"<{$checked.i6.eb_015|default:""}> /></td>
+</tr>
+<tr>
+<td colspan="5" align="right" class="foot">
+<input type="radio" name="i6" value="space"<{$checked.i6.space|default:""}> /> <{$_MD_AVATARMAKER_CLEAR}>
+<input type="submit" name="preview" value="<{$_MD_AVATARMAKER_PREVIEW}>" />
+</td>
+</tr>
+</table>
+
+<p align="center">
+	[ <a href="#background"><{$_MD_AVATARMAKER_BACKGROUND}></a> ]
+	[ <a href="#bhair"><{$_MD_AVATARMAKER_BHAIR}></a> ]
+	[ <a href="#ear"><{$_MD_AVATARMAKER_EAR}></a> ]
+	[ <a href="#face"><{$_MD_AVATARMAKER_FACE}></a> ]
+	[ <a href="#fhair"><{$_MD_AVATARMAKER_FHAIR}></a> ]
+	[ <a href="#eyebrow"><{$_MD_AVATARMAKER_EYEBROW}></a> ]
+	[ <a href="#eyes"><{$_MD_AVATARMAKER_EYES}></a> ]
+	[ <a href="#nose"><{$_MD_AVATARMAKER_NOSE}></a> ]
+	[ <a href="#mouth"><{$_MD_AVATARMAKER_MOUTH}></a> ]
+	[ <a href="#dress"><{$_MD_AVATARMAKER_DRESS}></a> ]
+	[ <a href="#others"><{$_MD_AVATARMAKER_OTHERS}></a> ]
+</p>
+
+<table class="outer">
+<tr>
+<th colspan="5" style="text-align: left;" name="eyes" id="eyes"><{$_MD_AVATARMAKER_EYES}></th>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/eye_001.png" /></td>
+<td><img src="img/eye_002.png" /></td>
+<td><img src="img/eye_003.png" /></td>
+<td><img src="img/eye_004.png" /></td>
+<td><img src="img/eye_005.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i7" value="eye_001"<{$checked.i7.eye_001|default:""}> /></td>
+<td><input type="radio" name="i7" value="eye_002"<{$checked.i7.eye_002|default:""}> /></td>
+<td><input type="radio" name="i7" value="eye_003"<{$checked.i7.eye_003|default:""}> /></td>
+<td><input type="radio" name="i7" value="eye_004"<{$checked.i7.eye_004|default:""}> /></td>
+<td><input type="radio" name="i7" value="eye_005"<{$checked.i7.eye_005|default:""}> /></td>
+</tr>
+<tr align="center" class="odd">
+<td><img src="img/eye_006.png" /></td>
+<td><img src="img/eye_007.png" /></td>
+<td><img src="img/eye_008.png" /></td>
+<td><img src="img/eye_009.png" /></td>
+<td><img src="img/eye_010.png" /></td>
+</tr>
+<tr align="center" class="odd">
+<td><input type="radio" name="i7" value="eye_006"<{$checked.i7.eye_006|default:""}> /></td>
+<td><input type="radio" name="i7" value="eye_007"<{$checked.i7.eye_007|default:""}> /></td>
+<td><input type="radio" name="i7" value="eye_008"<{$checked.i7.eye_008|default:""}> /></td>
+<td><input type="radio" name="i7" value="eye_009"<{$checked.i7.eye_009|default:""}> /></td>
+<td><input type="radio" name="i7" value="eye_010"<{$checked.i7.eye_010|default:""}> /></td>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/eye_011.png" /></td>
+<td><img src="img/eye_012.png" /></td>
+<td><img src="img/eye_013.png" /></td>
+<td><img src="img/eye_014.png" /></td>
+<td><img src="img/eye_015.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i7" value="eye_011"<{$checked.i7.eye_011|default:""}> /></td>
+<td><input type="radio" name="i7" value="eye_012"<{$checked.i7.eye_012|default:""}> /></td>
+<td><input type="radio" name="i7" value="eye_013"<{$checked.i7.eye_013|default:""}> /></td>
+<td><input type="radio" name="i7" value="eye_014"<{$checked.i7.eye_014|default:""}> /></td>
+<td><input type="radio" name="i7" value="eye_015"<{$checked.i7.eye_015|default:""}> /></td>
+</tr>
+<tr>
+<td colspan="5" align="right" class="foot">
+<input type="radio" name="i7" value="space"<{$checked.i7.space|default:""}> /> <{$_MD_AVATARMAKER_CLEAR}>
+<input type="submit" name="preview" value="<{$_MD_AVATARMAKER_PREVIEW}>" />
+</td>
+</tr>
+</table>
+
+<p align="center">
+	[ <a href="#background"><{$_MD_AVATARMAKER_BACKGROUND}></a> ]
+	[ <a href="#bhair"><{$_MD_AVATARMAKER_BHAIR}></a> ]
+	[ <a href="#ear"><{$_MD_AVATARMAKER_EAR}></a> ]
+	[ <a href="#face"><{$_MD_AVATARMAKER_FACE}></a> ]
+	[ <a href="#fhair"><{$_MD_AVATARMAKER_FHAIR}></a> ]
+	[ <a href="#eyebrow"><{$_MD_AVATARMAKER_EYEBROW}></a> ]
+	[ <a href="#eyes"><{$_MD_AVATARMAKER_EYES}></a> ]
+	[ <a href="#nose"><{$_MD_AVATARMAKER_NOSE}></a> ]
+	[ <a href="#mouth"><{$_MD_AVATARMAKER_MOUTH}></a> ]
+	[ <a href="#dress"><{$_MD_AVATARMAKER_DRESS}></a> ]
+	[ <a href="#others"><{$_MD_AVATARMAKER_OTHERS}></a> ]
+</p>
+
+<table class="outer">
+<tr>
+<th colspan="5" style="text-align: left;" name="nose" id="nose"><{$_MD_AVATARMAKER_NOSE}></th>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/ns_001.png" /></td>
+<td><img src="img/ns_002.png" /></td>
+<td><img src="img/ns_003.png" /></td>
+<td><img src="img/ns_004.png" /></td>
+<td><img src="img/ns_005.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i8" value="ns_001"<{$checked.i8.ns_001|default:""}> /></td>
+<td><input type="radio" name="i8" value="ns_002"<{$checked.i8.ns_002|default:""}> /></td>
+<td><input type="radio" name="i8" value="ns_003"<{$checked.i8.ns_003|default:""}> /></td>
+<td><input type="radio" name="i8" value="ns_004"<{$checked.i8.ns_004|default:""}> /></td>
+<td><input type="radio" name="i8" value="ns_005"<{$checked.i8.ns_005|default:""}> /></td>
+</tr>
+<tr align="center" class="odd">
+<td><img src="img/ns_006.png" /></td>
+<td><img src="img/ns_007.png" /></td>
+<td><img src="img/ns_008.png" /></td>
+<td><img src="img/ns_009.png" /></td>
+<td><img src="img/ns_010.png" /></td>
+</tr>
+<tr align="center" class="odd">
+<td><input type="radio" name="i8" value="ns_006"<{$checked.i8.ns_006|default:""}> /></td>
+<td><input type="radio" name="i8" value="ns_007"<{$checked.i8.ns_007|default:""}> /></td>
+<td><input type="radio" name="i8" value="ns_008"<{$checked.i8.ns_008|default:""}> /></td>
+<td><input type="radio" name="i8" value="ns_009"<{$checked.i8.ns_009|default:""}> /></td>
+<td><input type="radio" name="i8" value="ns_010"<{$checked.i8.ns_010|default:""}> /></td>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/ns_011.png" /></td>
+<td><img src="img/ns_012.png" /></td>
+<td><img src="img/ns_013.png" /></td>
+<td><img src="img/ns_014.png" /></td>
+<td><img src="img/ns_015.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i8" value="ns_011"<{$checked.i8.ns_011|default:""}> /></td>
+<td><input type="radio" name="i8" value="ns_012"<{$checked.i8.ns_012|default:""}> /></td>
+<td><input type="radio" name="i8" value="ns_013"<{$checked.i8.ns_013|default:""}> /></td>
+<td><input type="radio" name="i8" value="ns_014"<{$checked.i8.ns_014|default:""}> /></td>
+<td><input type="radio" name="i8" value="ns_015"<{$checked.i8.ns_015|default:""}> /></td>
+</tr>
+<tr>
+<td colspan="5" align="right" class="foot">
+<input type="radio" name="i8" value="space"<{$checked.i8.space|default:""}> /> <{$_MD_AVATARMAKER_CLEAR}>
+<input type="submit" name="preview" value="<{$_MD_AVATARMAKER_PREVIEW}>" />
+</td>
+</tr>
+</table>
+
+<p align="center">
+	[ <a href="#background"><{$_MD_AVATARMAKER_BACKGROUND}></a> ]
+	[ <a href="#bhair"><{$_MD_AVATARMAKER_BHAIR}></a> ]
+	[ <a href="#ear"><{$_MD_AVATARMAKER_EAR}></a> ]
+	[ <a href="#face"><{$_MD_AVATARMAKER_FACE}></a> ]
+	[ <a href="#fhair"><{$_MD_AVATARMAKER_FHAIR}></a> ]
+	[ <a href="#eyebrow"><{$_MD_AVATARMAKER_EYEBROW}></a> ]
+	[ <a href="#eyes"><{$_MD_AVATARMAKER_EYES}></a> ]
+	[ <a href="#nose"><{$_MD_AVATARMAKER_NOSE}></a> ]
+	[ <a href="#mouth"><{$_MD_AVATARMAKER_MOUTH}></a> ]
+	[ <a href="#dress"><{$_MD_AVATARMAKER_DRESS}></a> ]
+	[ <a href="#others"><{$_MD_AVATARMAKER_OTHERS}></a> ]
+</p>
+
+<table class="outer">
+<tr>
+<th colspan="5" style="text-align: left;" name="mouth" id="mouth"><{$_MD_AVATARMAKER_MOUTH}></th>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/mo_001.png" /></td>
+<td><img src="img/mo_002.png" /></td>
+<td><img src="img/mo_003.png" /></td>
+<td><img src="img/mo_004.png" /></td>
+<td><img src="img/mo_005.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i9" value="mo_001"<{$checked.i9.mo_001|default:""}> /></td>
+<td><input type="radio" name="i9" value="mo_002"<{$checked.i9.mo_002|default:""}> /></td>
+<td><input type="radio" name="i9" value="mo_003"<{$checked.i9.mo_003|default:""}> /></td>
+<td><input type="radio" name="i9" value="mo_004"<{$checked.i9.mo_004|default:""}> /></td>
+<td><input type="radio" name="i9" value="mo_005"<{$checked.i9.mo_005|default:""}> /></td>
+</tr>
+<tr align="center" class="odd">
+<td><img src="img/mo_006.png" /></td>
+<td><img src="img/mo_007.png" /></td>
+<td><img src="img/mo_008.png" /></td>
+<td><img src="img/mo_009.png" /></td>
+<td><img src="img/mo_010.png" /></td>
+</tr>
+<tr align="center" class="odd">
+<td><input type="radio" name="i9" value="mo_006"<{$checked.i9.mo_006|default:""}> /></td>
+<td><input type="radio" name="i9" value="mo_007"<{$checked.i9.mo_007|default:""}> /></td>
+<td><input type="radio" name="i9" value="mo_008"<{$checked.i9.mo_008|default:""}> /></td>
+<td><input type="radio" name="i9" value="mo_009"<{$checked.i9.mo_009|default:""}> /></td>
+<td><input type="radio" name="i9" value="mo_010"<{$checked.i9.mo_010|default:""}> /></td>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/mo_011.png" /></td>
+<td><img src="img/mo_012.png" /></td>
+<td><img src="img/mo_013.png" /></td>
+<td><img src="img/mo_014.png" /></td>
+<td><img src="img/mo_015.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i9" value="mo_011"<{$checked.i9.mo_011|default:""}> /></td>
+<td><input type="radio" name="i9" value="mo_012"<{$checked.i9.mo_012|default:""}> /></td>
+<td><input type="radio" name="i9" value="mo_013"<{$checked.i9.mo_013|default:""}> /></td>
+<td><input type="radio" name="i9" value="mo_014"<{$checked.i9.mo_014|default:""}> /></td>
+<td><input type="radio" name="i9" value="mo_015"<{$checked.i9.mo_015|default:""}> /></td>
+</tr>
+<tr>
+<td colspan="5" align="right" class="foot">
+<input type="radio" name="i9" value="space"<{$checked.i9.space|default:""}> /> <{$_MD_AVATARMAKER_CLEAR}>
+<input type="submit" name="preview" value="<{$_MD_AVATARMAKER_PREVIEW}>" />
+</td>
+</tr>
+</table>
+
+<p align="center">
+	[ <a href="#background"><{$_MD_AVATARMAKER_BACKGROUND}></a> ]
+	[ <a href="#bhair"><{$_MD_AVATARMAKER_BHAIR}></a> ]
+	[ <a href="#ear"><{$_MD_AVATARMAKER_EAR}></a> ]
+	[ <a href="#face"><{$_MD_AVATARMAKER_FACE}></a> ]
+	[ <a href="#fhair"><{$_MD_AVATARMAKER_FHAIR}></a> ]
+	[ <a href="#eyebrow"><{$_MD_AVATARMAKER_EYEBROW}></a> ]
+	[ <a href="#eyes"><{$_MD_AVATARMAKER_EYES}></a> ]
+	[ <a href="#nose"><{$_MD_AVATARMAKER_NOSE}></a> ]
+	[ <a href="#mouth"><{$_MD_AVATARMAKER_MOUTH}></a> ]
+	[ <a href="#dress"><{$_MD_AVATARMAKER_DRESS}></a> ]
+	[ <a href="#others"><{$_MD_AVATARMAKER_OTHERS}></a> ]
+</p>
+
+<table class="outer">
+<tr>
+<th colspan="5" style="text-align: left;" name="dress" id="dress"><{$_MD_AVATARMAKER_DRESS}></th>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/cl_001.png" /></td>
+<td><img src="img/cl_002.png" /></td>
+<td><img src="img/cl_003.png" /></td>
+<td><img src="img/cl_004.png" /></td>
+<td><img src="img/cl_005.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i10" value="cl_001"<{$checked.i10.cl_001|default:""}> /></td>
+<td><input type="radio" name="i10" value="cl_002"<{$checked.i10.cl_002|default:""}> /></td>
+<td><input type="radio" name="i10" value="cl_003"<{$checked.i10.cl_003|default:""}> /></td>
+<td><input type="radio" name="i10" value="cl_004"<{$checked.i10.cl_004|default:""}> /></td>
+<td><input type="radio" name="i10" value="cl_005"<{$checked.i10.cl_005|default:""}> /></td>
+</tr>
+<tr align="center" class="odd">
+<td><img src="img/cl_006.png" /></td>
+<td><img src="img/cl_007.png" /></td>
+<td><img src="img/cl_008.png" /></td>
+<td><img src="img/cl_009.png" /></td>
+<td><img src="img/cl_010.png" /></td>
+</tr>
+<tr align="center" class="odd">
+<td><input type="radio" name="i10" value="cl_006"<{$checked.i10.cl_006|default:""}> /></td>
+<td><input type="radio" name="i10" value="cl_007"<{$checked.i10.cl_007|default:""}> /></td>
+<td><input type="radio" name="i10" value="cl_008"<{$checked.i10.cl_008|default:""}> /></td>
+<td><input type="radio" name="i10" value="cl_009"<{$checked.i10.cl_009|default:""}> /></td>
+<td><input type="radio" name="i10" value="cl_010"<{$checked.i10.cl_010|default:""}> /></td>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/cl_011.png" /></td>
+<td><img src="img/cl_012.png" /></td>
+<td><img src="img/cl_013.png" /></td>
+<td><img src="img/cl_014.png" /></td>
+<td><img src="img/cl_015.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i10" value="cl_011"<{$checked.i10.cl_011|default:""}> /></td>
+<td><input type="radio" name="i10" value="cl_012"<{$checked.i10.cl_012|default:""}> /></td>
+<td><input type="radio" name="i10" value="cl_013"<{$checked.i10.cl_013|default:""}> /></td>
+<td><input type="radio" name="i10" value="cl_014"<{$checked.i10.cl_014|default:""}> /></td>
+<td><input type="radio" name="i10" value="cl_015"<{$checked.i10.cl_015|default:""}> /></td>
+</tr>
+<tr>
+<td colspan="5" align="right" class="foot">
+<input type="radio" name="i10" value="space"<{$checked.i10.space|default:""}> /> <{$_MD_AVATARMAKER_CLEAR}>
+<input type="submit" name="preview" value="<{$_MD_AVATARMAKER_PREVIEW}>" />
+</td>
+</tr>
+</table>
+
+<p align="center">
+	[ <a href="#background"><{$_MD_AVATARMAKER_BACKGROUND}></a> ]
+	[ <a href="#bhair"><{$_MD_AVATARMAKER_BHAIR}></a> ]
+	[ <a href="#ear"><{$_MD_AVATARMAKER_EAR}></a> ]
+	[ <a href="#face"><{$_MD_AVATARMAKER_FACE}></a> ]
+	[ <a href="#fhair"><{$_MD_AVATARMAKER_FHAIR}></a> ]
+	[ <a href="#eyebrow"><{$_MD_AVATARMAKER_EYEBROW}></a> ]
+	[ <a href="#eyes"><{$_MD_AVATARMAKER_EYES}></a> ]
+	[ <a href="#nose"><{$_MD_AVATARMAKER_NOSE}></a> ]
+	[ <a href="#mouth"><{$_MD_AVATARMAKER_MOUTH}></a> ]
+	[ <a href="#dress"><{$_MD_AVATARMAKER_DRESS}></a> ]
+	[ <a href="#others"><{$_MD_AVATARMAKER_OTHERS}></a> ]
+</p>
+
+<table class="outer">
+<tr>
+<th colspan="5" style="text-align: left;" name="others" id="others"><{$_MD_AVATARMAKER_OTHERS}></th>
+</tr>
+<tr align="center" class="even">
+<td><img src="img/oth_001.png" /></td>
+<td><img src="img/oth_002.png" /></td>
+<td><img src="img/oth_003.png" /></td>
+<td><img src="img/oth_004.png" /></td>
+<td><img src="img/oth_005.png" /></td>
+</tr>
+<tr align="center" class="even">
+<td><input type="radio" name="i11" value="oth_001"<{$checked.i11.oth_001|default:""}> /></td>
+<td><input type="radio" name="i11" value="oth_002"<{$checked.i11.oth_002|default:""}> /></td>
+<td><input type="radio" name="i11" value="oth_003"<{$checked.i11.oth_003|default:""}> /></td>
+<td><input type="radio" name="i11" value="oth_004"<{$checked.i11.oth_004|default:""}> /></td>
+<td><input type="radio" name="i11" value="oth_005"<{$checked.i11.oth_005|default:""}> /></td>
+</tr>
+<tr align="center" class="odd">
+<td><img src="img/oth_006.png" /></td>
+<td><img src="img/oth_007.png" /></td>
+<td><img src="img/oth_008.png" /></td>
+<td><img src="img/oth_009.png" /></td>
+<td></td>
+</tr>
+<tr align="center" class="odd">
+<td><input type="radio" name="i11" value="oth_006"<{$checked.i11.oth_006|default:""}> /></td>
+<td><input type="radio" name="i11" value="oth_007"<{$checked.i11.oth_007|default:""}> /></td>
+<td><input type="radio" name="i11" value="oth_008"<{$checked.i11.oth_008|default:""}> /></td>
+<td><input type="radio" name="i11" value="oth_009"<{$checked.i11.oth_009|default:""}> /></td>
+<td></td>
+</tr>
+<tr>
+<td colspan="5" align="right" class="foot">
+<input type="radio" name="i11" value="space"<{$checked.i11.space|default:""}> /> <{$_MD_AVATARMAKER_CLEAR}>
+<input type="submit" name="preview" value="<{$_MD_AVATARMAKER_PREVIEW}>" />
+</td>
+</tr>
+</table>
+
+<table class="outer">
+<tr>
+<td colspan="5" align="center" class="foot">
+<input type="submit" name="preview" value="<{$_MD_AVATARMAKER_PREVIEW}>" />
+</td>
+</tr>
+</table>
+
+<div align="center">
+<!-- ban on deletion from start to end -->
+<!-- start から end まで削除改変禁止 -->
+<!-- start -->
++ Avatar-Maker ! By <a href="http://petitoops.net/" target="_blank">PetitOOps</a> +
+<!--end-->
+</div>
+
+<p align="center">
+<!-- 初期添付画像を利用する場合削除を禁止します --> traduction par <a href="http://www.totalgratuit.com">team-totalgratuit</a></p>
+
+</form>
+<!-- end of avatarmaker main block -->
